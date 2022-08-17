@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"> <head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+/>
+<title>Document</title>
+</head>
+
+<body>
+    <div id="ele1">hello </div>
+    
+<script>
+
+//Función a modificar
+    // function pintar(){
+    //     ele = document.getElementById("ele1")
+    //     ele.style.backgroundColor = 'yellow' 
+    // }
+    //     ele = document.getElementById("ele1") 
+    //     ele.addEventListener("click", pintar); 
+
+// //Función modificada 3.1
+
+    ele = document.getElementById("ele1")
+    ele.addEventListener("click", function(){
+        ele.style.backgroundColor= "yellow";
+    });
+
+//Función modificada 3.2
+    function pintar(ele, color='green'){
+        ele.style.backgroundColor = color
+    }
+
+    pintar(ele);
+        ele.addEventListener("click", function (){
+        pintar(ele,"yellow")
+    });
+
+</script>
+    
+</body>
+</html>
